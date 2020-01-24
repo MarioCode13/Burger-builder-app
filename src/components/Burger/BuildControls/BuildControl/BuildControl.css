@@ -1,0 +1,130 @@
+.BuildControl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.BuildControl button {
+    display: block;
+    font: inherit;
+    padding: 5px;
+    margin: 0 5px;
+    width: 80px;
+    border: 1px solid #AA6817;
+    cursor: pointer;
+    outline: none;
+    height: 40px;
+    width: 40px;
+}
+
+
+.BuildControl button:disabled {
+    background-color: #AC9980;
+    border: 1px solid #7E7365;
+    color: #ccc;
+    cursor: default;
+}
+
+.BuildControl button:hover:disabled {
+    background-color: #AC9980;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.Label {
+    padding: 10px;
+    font-weight: bold;
+    width: 80px;
+}
+
+.BuildControl .Less {  
+    background-color: rgb(160, 115, 61);
+    font-weight: bold;
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.BuildControl .More {
+    background-color:  #D39952;
+    font-weight: bold;
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Courier New', Courier, monospace;
+    animation: larger;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: initial;
+}
+
+@keyframes larger{
+    0% {
+      transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+
+.BuildControl .Less:hover, .BuildControl .Less:active {  
+    background-color:rgb(163, 135, 100);
+    color: white;
+}
+
+.BuildControl .More:hover,.BuildControl .More:active {
+    background-color: rgb(214, 175, 127);
+    color: white;
+}
+
+.More:hover{
+    animation: colour-change;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes colour-change{
+    0% {
+        background: linear-gradient(0deg, rgb(255, 0, 0), rgb(184, 16, 206) , rgb(105, 4, 238));
+        background-position: 0% 50%;
+    }
+    20% {
+        background: linear-gradient(-45deg, rgb(255, 0, 0), rgb(184, 16, 206) , rgb(105, 4, 238));
+        background-position: 0% 50%;
+      }
+    35% {
+        background: linear-gradient(-90deg, rgb(255, 0, 0), rgb(184, 16, 206) , rgb(105, 4, 238));
+        background-position: 0% 50%;
+      }
+    50% {
+        background: linear-gradient(-135deg, rgb(255, 0, 0), rgb(184, 16, 206) , rgb(105, 4, 238));
+        background-position: 0% 50%;
+      }
+    60% {
+        background: linear-gradient(-180deg, rgb(255, 0, 0), rgb(184, 16, 206) , rgb(105, 4, 238));
+        background-position: 0% 50%;
+      }
+    72% {
+        background: linear-gradient(-225deg, rgb(255, 0, 0), rgb(184, 16, 206) , rgb(105, 4, 238));
+        background-position: 0% 50%;
+    }
+    84% {
+        background: linear-gradient(-270deg, rgb(255, 0, 0), rgb(184, 16, 206) , rgb(105, 4, 238));
+        background-position: 0% 50%;
+    }
+    92% {
+        background: linear-gradient(-315deg, rgb(255, 0, 0), rgb(184, 16, 206) , rgb(105, 4, 238));
+        background-position: 0% 50%;
+    }
+    100% {
+        background: linear-gradient(-360deg, rgb(255, 0, 0), rgb(184, 16, 206) , rgb(105, 4, 238));
+        background-position: 0% 50%;
+    }
+}

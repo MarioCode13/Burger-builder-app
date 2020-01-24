@@ -1,0 +1,68 @@
+.BuildControls {
+    width: 100%;
+    background: linear-gradient(-45deg, rgb(221, 18, 18), rgb(206, 206, 16), rgb(172, 39, 39))
+        no-repeat 50% 50% / 400% 400%;
+    animation: gradBG 10s ease infinite;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    box-shadow: 0 2px 1px #ccc;
+    margin: auto;
+    padding: 10px 0;
+}
+@keyframes gradBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.OrderButton {
+    background-color: rgb(236, 233, 45);
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #966909;
+    color: #f82d2d;
+    font-family: inherit;
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 15px 30px;
+    box-shadow: 2px 2px 2px #966909;
+    width: 250px;
+    height: 70px;
+    margin: 10px;
+}
+
+.OrderButton:hover {
+    background-color: #a0db41;
+    border: 1px solid #966909;
+    color: #966909;
+}
+
+.OrderButton:disabled {
+    background-color: #c7c6c6;
+    cursor: not-allowed;
+    border: 1px solid #ccc;
+    color: #888888;
+}
+
+.OrderButton:not(:disabled) {
+    animation: enable 0.3s linear;
+}
+
+@keyframes enable {
+    0% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
